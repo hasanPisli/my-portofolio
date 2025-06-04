@@ -92,7 +92,7 @@
                 </a>
             </div>
             <div class="wtoffcanvas__title">
-                <p>Omio is the partner of choice for many of the world’s leading enterprises. We help businesses development.</p>
+                <p>We are the partner of choice for many of the world’s leading enterprises. We help businesses development.</p>
             </div>
             <div class="wt-main-menu-mobile d-xl-none"></div>
             <div class="wtoffcanvas__contact-info">
@@ -106,7 +106,7 @@
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:techubinfo@mail.com"><span class="__cf_email__">omioinfo@mail.com</span></a>
+                        <a href="mailto:hasanpisli3@gmail.com"><span class="__cf_email__">hasanpisli3@gmail.com</span></a>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone-flip"></i>
@@ -247,57 +247,70 @@
                                     <div class="wt-contact-section-wrapper">
                                         <h4 class="wt-contact-section-title">let’s work together</h4>
                                     </div>
-                                    <form id="contact-form" action="assets/mail.php" method="post">
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="form-input">
-                                                    <label>Full name</label>
-                                                    <input type="text" id="name" name="name" placeholder="Joshua V. Brown" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12">
-                                                <div class="form-input">
-                                                    <label>email address</label>
-                                                    <input type="email" id="emailThree" name="email" placeholder="hasanpisli3@gmail.com" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12">
-                                                <div class="form-input">
-                                                    <label>email address</label>
-                                                    <div class="wt-nice-select-box">
-                                                        <div class="wt-select">
-                                                            <select>
-                                                                <option value="2">i would like to discussed </option>
-                                                                <option value="2">Home Renovation</option>
-                                                                <option value="2">Constructions</option>
-                                                                <option value="2">Architecture Design</option>
-                                                                <option value="2">Residential Space</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12">
-                                                <div class="form-input">
-                                                    <label>message</label>
-                                                    <textarea name="message" id="message" placeholder="write message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="wt-contact-button">
-                                                    <div class="wt-hover-btn-wrapper">
-                                                        <button class="wt-btn-circle wt-hover-btn-item wt-hover-btn" type="submit">
-                                                            <span class="wt-btn-circle-icon">
-                                                                <i class="fa-regular fa-arrow-up-right"></i>
-                                                               </span>
-                                                               <i class="wt-btn-circle-dot"></i>
-                                                        </button>
-                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="ajax-response"></p>
-                                    </form>
+                                   <form id="contact-form" action="https://formsubmit.co/hasanpisli3@gmail.com" method="POST">
+    
+    <!-- Opsionale: Ndalimi i captcha të formsubmit -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Opsionale: Pas dërgimit ridrejto në këtë faqe falënderimi -->
+    <input type="hidden" name="_next" value="https://hasanpisli.github.io/thank-you.html">
+
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="form-input">
+                <label>Full name</label>
+                <input type="text" id="name" name="name" placeholder="Joshua V. Brown" required>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="form-input">
+                <label>Email address</label>
+                <input type="email" id="emailThree" name="email" placeholder="your@email.com" required>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="form-input">
+                <label>Subject</label>
+                <div class="wt-nice-select-box">
+                    <div class="wt-select">
+                        <select name="topic" required>
+                            <option value="I would like to discuss">I would like to discuss</option>
+                            <option value="Home Renovation">Home Renovation</option>
+                            <option value="Constructions">Constructions</option>
+                            <option value="Architecture Design">Architecture Design</option>
+                            <option value="Residential Space">Residential Space</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="form-input">
+                <label>Message</label>
+                <textarea name="message" id="message" placeholder="Write message" required></textarea>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="wt-contact-button">
+                <div class="wt-hover-btn-wrapper">
+                    <button class="wt-btn-circle wt-hover-btn-item wt-hover-btn" type="submit">
+                        <span class="wt-btn-circle-icon">
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                        </span>
+                        <i class="wt-btn-circle-dot"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="ajax-response"></p>
+</form>
+
                                 </div>
                             </div>
                         </div>

@@ -249,27 +249,29 @@
                                     </div>
                                    <form id="contact-form" action="https://formsubmit.co/hasanpisli3@gmail.com" method="POST">
     
-    <!-- Opsionale: Ndalimi i captcha të formsubmit -->
+ <form id="contact-form" action="https://formsubmit.co/hasanpisli3@gmail.com" method="POST">
+
+    <!-- Mos përdor captcha automatike -->
     <input type="hidden" name="_captcha" value="false">
 
-    <!-- Opsionale: Pas dërgimit ridrejto në këtë faqe falënderimi -->
-    <input type="hidden" name="_next" value="https://hasanpisli.github.io/thank-you.html">
-
     <div class="row">
+        <!-- Emri -->
         <div class="col-xl-12">
             <div class="form-input">
                 <label>Full name</label>
-                <input type="text" id="name" name="name" placeholder="Joshua V. Brown" required>
+                <input type="text" name="name" placeholder="Joshua V. Brown" required>
             </div>
         </div>
 
+        <!-- Email -->
         <div class="col-xl-12">
             <div class="form-input">
                 <label>Email address</label>
-                <input type="email" id="emailThree" name="email" placeholder="your@email.com" required>
+                <input type="email" name="email" placeholder="your@email.com" required>
             </div>
         </div>
 
+        <!-- Subjekti -->
         <div class="col-xl-12">
             <div class="form-input">
                 <label>Subject</label>
@@ -287,13 +289,15 @@
             </div>
         </div>
 
+        <!-- Mesazhi -->
         <div class="col-xl-12">
             <div class="form-input">
                 <label>Message</label>
-                <textarea name="message" id="message" placeholder="Write message" required></textarea>
+                <textarea name="message" placeholder="Write message" required></textarea>
             </div>
         </div>
 
+        <!-- Butoni Submit -->
         <div class="col-lg-12">
             <div class="wt-contact-button">
                 <div class="wt-hover-btn-wrapper">
@@ -308,8 +312,12 @@
         </div>
     </div>
 
-    <p class="ajax-response"></p>
+    <!-- Mesazhi pas dërgimit -->
+    <p id="form-message" style="display:none; color: green; font-weight: bold; margin-top: 20px;">
+        ✅ Thank you! Your message has been sent.
+    </p>
 </form>
+
 
                                 </div>
                             </div>
@@ -426,7 +434,30 @@
 
 
 
+<!-- JavaScript për dërgim dhe mesazh -->
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Mos rifresko faqen
 
+    const form = this;
+    const formMessage = document.getElementById("form-message");
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        formMessage.style.display = "block"; // Shfaq mesazhin
+        form.reset(); // Pastro fushat
+      } else {
+        alert("There was a problem sending your message.");
+      }
+    }).catch(error => {
+      alert("Error! Please try again later.");
+    });
+  });
+</script>
     <!-- JS here -->
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/waypoints.js"></script>
